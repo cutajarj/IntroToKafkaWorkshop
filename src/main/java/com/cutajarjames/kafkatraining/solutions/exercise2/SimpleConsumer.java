@@ -1,4 +1,4 @@
-package com.cutajarjames.kafkatraining.solutions.exercise3;
+package com.cutajarjames.kafkatraining.solutions.exercise2;
 
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
