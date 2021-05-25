@@ -55,7 +55,7 @@ public class SequenceProducer {
     }
 
     private static List<Long> seq1(int n) {
-        boolean pTable[] = new boolean[n + 1];
+        boolean[] pTable = new boolean[n + 1];
         Arrays.fill(pTable, true);
         for (int p = 2; p * p <= n; p++) {
             if (pTable[p]) {

@@ -34,11 +34,9 @@ public class SimpleConsumer {
             System.out.println("Polling for 10 seconds");
             var records = consumer.poll(Duration.ofSeconds(10));
 
-            records.forEach(record -> {
-                System.out.printf("Key: %s, Value: %s, Partition: %d, Offset: %d)\n",
-                        record.key(), record.value(),
-                        record.partition(), record.offset());
-            });
+            records.forEach(record -> System.out.printf("Key: %s, Value: %s, Partition: %d, Offset: %d)\n",
+                    record.key(), record.value(),
+                    record.partition(), record.offset()));
 
             consumer.commitAsync();
         }
