@@ -13,8 +13,7 @@ import java.util.UUID;
 
 public class SimpleConsumer {
     private final static String TOPIC = "kafkaTrainingSequence";
-    private final static String SERVERS = "ie1-kdp001-qa.qa.betfair:9092,ie1-kdp002-qa.qa.betfair:9092,ie1-kdp003-qa.qa.betfair:9092";
-    //private final static String SERVERS = "localhost:9092,localhost:9092,localhost:9092";
+    private final static String SERVERS = "localhost:9092,localhost:9092,localhost:9092";
 
     private Consumer<String, Long> createConsumer() {
         var props = new Properties();

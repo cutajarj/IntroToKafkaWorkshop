@@ -20,20 +20,22 @@ public class SimpleConsumer {
     private Consumer<String, Long> createConsumer() {
         var props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, SERVERS);
+        //3. Put more properties such as deserializers, group id, and a way to consume from the beginning
         return null;
     }
 
-    //3. Implement start consumer
+    //4. Implement start consumer
     public void startConsumer() {
         var consumer = createConsumer();
         while (true) {
-            //4. Poll
-            //5. Print records
-            //6. Commit
+            //5. Poll
+            //6. Print records
+            //7. Commit
         }
     }
 
     public static void main(String[] args) {
-
+        var simpleConsumer = new SimpleConsumer();
+        simpleConsumer.startConsumer();
     }
 }

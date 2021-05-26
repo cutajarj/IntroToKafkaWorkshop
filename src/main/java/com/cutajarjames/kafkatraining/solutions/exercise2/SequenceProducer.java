@@ -10,11 +10,11 @@ import java.util.*;
 
 public class SequenceProducer {
     private final static String TOPIC = "kafkaTrainingSequence";
-    private final static String SERVERS = "ie1-kdp001-qa.qa.betfair:9092,ie1-kdp002-qa.qa.betfair:9092,ie1-kdp001-qa.qa.betfair:9092";
+    private final static String SERVERS = "localhost:9092,localhost:9092,localhost:9092";
 
     public static void main(String[] args) {
         var props = new Properties();
-        props.put("bootstrap.servers", SERVERS);
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, SERVERS);
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, LongSerializer.class.getName());
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         var producer = new KafkaProducer<String, Long>(props);
