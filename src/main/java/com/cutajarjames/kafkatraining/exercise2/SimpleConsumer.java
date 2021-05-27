@@ -21,6 +21,7 @@ public class SimpleConsumer {
         var props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, SERVERS);
         //3. Put more properties such as deserializers, group id, and a way to consume from the beginning
+        //The key on the record is a STRING, and the value is a LONG
         return null;
     }
 
